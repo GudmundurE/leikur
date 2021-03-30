@@ -1,5 +1,6 @@
 import classes
 import mobs
+import nav
 
 print("Welcome")
 wants_to_play = input("Press 1 to start playing!: ")
