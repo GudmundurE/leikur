@@ -1,21 +1,36 @@
 def Warrior():
 
-    health = 200
+    hp = 200
     dmg = 30
     luck = 2
-    return health, dmg, luck
+    return hp, dmg, luck
 
 def Ranger():
 
-    health = 200
+    hp = 200
     dmg = 30
     luck = 2
-    return health, dmg, luck
+    return hp, dmg, luck
 
 def Mage():
 
-    health = 200
+    hp = 200
     dmg = 30
     luck = 2
 
-    return health, dmg, luck
+    return hp, dmg, luck
+
+def skeleton():
+
+    hp = 80
+    dmg = 7
+    luck = 0
+
+def zombie():
+
+    hp = 80
+    dmg = 7
+    luck = 0
+
+
+    
