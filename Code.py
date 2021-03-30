@@ -8,7 +8,7 @@ print("Hæ PAlli")
 
 print("FOKKOFF")
 
-adfh
+ad
 
 akakak
 
