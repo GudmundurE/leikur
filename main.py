@@ -7,15 +7,15 @@ if wants_to_play == "1":
      print("You play as a dwarf who is on his way to a bar")
      class_chosen = input("Chose your class: Warrior/1, Ranger/2, Mage/3   ")
      if class_chosen == "1":
-            health, damage, luck = classes.Warrior()
+            hp, dmg, luck = classes.Warrior()
             
      elif class_chosen == "2":
-            health, damage, luck = classes.Ranger()
+            hp, dmg, luck = classes.Ranger()
                 
      elif class_chosen == "3":
-            health, damage, luck = classes.Mage()
+            hp, dmg, luck = classes.Mage()
                     
      else:
          print("bæ")
 
-print(health)
+print("You start with ", hp, " hp, ", dmg, "dmg and ", luck, "luck")

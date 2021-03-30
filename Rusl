@@ -15,3 +15,12 @@
             print("You fell down and lost!")
     else:
         print("bæ")
+
+
+Warrior: 200 hp, 30 dmg, 2 l
+ranger: hp 140, 22 dmg, 3 l
+mage: 100 hp, 10 dmg, 4 l
+
+
+
+
