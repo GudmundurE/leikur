@@ -1,29 +1,114 @@
+import csv
+import random
+import os
+import os.path
+from os import path
+
+
+def nav():
+    with open("map.csv", "w", newline='') as file:
+        writer = csv.writer(file)
+        for y in range (1,6):
+            for x in range (1,6):
+                
+                N = random.randint(0,1)
+                E = random.randint(0,1)
+                W = random.randint(0,1)
+                S = random.randint(0,1)
+                with open("map.csv", newline='') as file_read:
+                    reader = csv.reader(file_read)
+                    for row in reader:
+                        if row[0] == str(x-1) and row[1] == str(y):
+                            if row[4] == str(1):
+                                W = 1
+                                break
+                            elif row[4] == str(0):
+                                W = 0
+                                break
+                            else:
+                                break
+                        if row[1] == str(y-1) and row[0] == str(x):
+                            if row[2] == str(1):
+                                S = 1
+                                break
+                            elif row[2] == str(0):
+                                S = 0
+                                break
+                            else:
+                                break
+
+                if x == 1:
+                    W = 0
+                if x == 5:
+                    E = 0
+                if y == 1:
+                    S = 0
+                if y == 5:
+                    N = 0
+                with open("map.csv", "a", newline='') as file:
+                    writer = csv.writer(file)
+                    writer.writerow([x,y,N,W,E,S])
+
+nav()
+
+
+"""
 def checkPos(x, y):
 	N = 1
 	W = 1
 	E = 1
 	S = 1
 
-	if x == 2 and y != 3:
-		E = 0
-	if x == 2 and y == 1:
-		W = 0
-	if x == 2 and y == 2:
-		N = 0
-	if x == 2 and y == 3:
-		S = 0
-	if x == 3 and y != 3:
-		W = 0
 	if x == 1 and y == 1:
-		W,E,S = 0,0,0
-	if x == 1:
-		W = 0
-	if y == 1:
-		S = 0
-	if y == 3:
-		N = 0
-	if x == 3:
-		E = 0
+        N,W,E,S = 1,0,0,0
+    if x == 2 and y == 1:
+        N,W,E,S = 1,0,1,0
+    if x == 3 and y == 1:
+        N,W,E,S = 1,1,1,0
+    if x == 4 and y == 1:
+        N,W,E,S = 1,1,1,0
+    if x == 5 and y == 1:
+        N,W,E,S = 1,1,0,0
+    if x == 1 and y == 2:
+        N,W,E,S = 0,0,1,1
+    if x == 2 and y == 2:
+        N,W,E,S = 1,1,0,1
+    if x == 3 and y == 2:
+        N,W,E,S = 0,0,0,1
+    if x == 4 and y == 2
+        N,W,E,S = 0,0,1,1
+    if x == 5 and y == 2:
+        N,W,E,S = 1,1,0,1
+    if x == 1 and y == 3:
+        N,W,E,S = 1,0,1,0
+    if x == 2 and y == 3:
+        N,W,E,S = 1,1,1,1
+    if x == 3 and y == 3:
+        N,W,E,S = 1,1,1,0
+    if x == 4 and y == 3:
+        N,W,E,S = 1,1,0,0
+    if x == 5 and y == 3:
+        N,W,E,S = 1,0,0,1
+    if x == 1 and y == 4:
+        N,W,E,S = 1,0,0,1
+    if x == 2 and y == 4:
+        N,W,E,S = 0,0,0,1
+    if x == 3 and y == 4:
+        N,W,E,S = 1,0,1,1
+    if x == 4 and y == 4:
+        N,W,E,S = 1,1,0,1
+    if x == 5 and y == 4:
+        N,W,E,S = 1,0,0,1
+    if x == 1 and y == 5:
+        N,W,E,S = 0,0,1,1
+    if x == 2 and y == 5:
+        N,W,E,S = 0,1,1,0
+    if x == 3 and y == 5:
+        N,W,E,S = 0,1,1,1
+    if x == 4 and y == 5:
+        N,W,E,S = 0,1,1,1
+    if x == 5 and y == 5:
+        N,W,E,S = 0,1,0,1
 	return N,W,E,S
 
 def travelNorth(x, y):
@@ -132,7 +217,7 @@ while halda_afram:
 
 		elif direct.lower() == "w":
 			current_x_pos, current_y_pos = travelWest(current_x_pos, current_y_pos)
-
+"""
 	
 		
 
