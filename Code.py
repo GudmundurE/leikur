@@ -7,3 +7,5 @@ print("Hæ nr.3")
 print("Hæ PAlli")
 
 print("FOKKOFF")
+
+adfh
