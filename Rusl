@@ -1,0 +1,17 @@
+'''
+        left_or_right = input("First choice... Left or Right (Left = 1 / Right = 2)?")
+        if left_or_right == "1":
+            ans = input("You follow the path and reach a lake... Do you swim across or go around (across = 1 / around = 2)")
+
+            if ans == "2":
+                print("You went around and reached the other side of the lake.")
+            elif ans == "1":
+                print("You managed to get across, but you were bit by a fish and lose 5 health")
+                health -= 5
+                print("You now have", health, "health")
+            else:
+                print("you lost.")
+        else:
+            print("You fell down and lost!")
+    else:
+        print("bæ")
