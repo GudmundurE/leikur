@@ -7,8 +7,8 @@ from os import path
 
 def nav():
     nav = []
-    for y in range (1,11):
-        for x in range (1,11):
+    for y in range (1,16):
+        for x in range (1,16):
             
             N = 1
             W = 1
@@ -31,11 +31,11 @@ def nav():
             
             if x == 1:
                 W = 0
-            if x == 5:
+            if x == 15:
                 E = 0
             if y == 1:
                 S = 0
-            if y == 5:
+            if y == 15:
                 N = 0
             
             biomes = ["Forest", "Lava fields", "Meadow", "Cave", "River lands"]
@@ -48,8 +48,8 @@ def nav():
     for i in range(1,len(nav)):
         if nav[i][0] == str(int(nav[i-1][0])+1) and nav[i][1] == nav[i-1][1]:
             nav[i][3] = nav[i-1][4]
-        if nav[i][1] == str(int(nav[i-10][1])-1) and nav[i][0] == nav[i-10][0]:
-            nav[i][5] = nav[i-10][2]
+        if nav[i][1] == str(int(nav[i-15][1])-1) and nav[i][0] == nav[i-15][0]:
+            nav[i][5] = nav[i-15][2]
         
     with open('map.csv', 'w', newline='') as file:
         writer = csv.writer(file)

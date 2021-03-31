@@ -1,11 +1,15 @@
 import classes
 import mobs
 import nav
+import directions
 
 print("Welcome")
 wants_to_play = input("Press 1 to start playing!: ")
 
+kort = nav.nav()
 
+x_pos = 8
+y_pos = 8
 
 while True:
        if wants_to_play == "1":
@@ -56,6 +60,17 @@ while True:
 
 
 print("You start with ", hp, " hp, ", dmg, "dmg and ", luck, "luck", hit_chance, dmg_mod)
+
+
+
+while True:
+       for row in kort:
+              if row[0] == x_pos and row[1] == y_pos:
+                     N,W,E,S = int(row[2]),int(row[3]),int(row[4]),int(row[5])
+                     biome = row[6]
+                     break
+       
+       x_pos,y_pos = directions.direct(N,W,E,S,x_pos,y_pos)
 
 
 
