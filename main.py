@@ -27,9 +27,9 @@ while True:
 
                      weapon_chosen = input("Choose your weapon: Bow/1, Crossbow/2: ")
                      if weapon_chosen == "1":
-                            dmg_mod, hit_chance = classes.Bow()
+                            dmg_mod, hit_chance, rel_time = classes.Bow()
                      elif weapon_chosen == "2":
-                            dmg_mod, hit_chance = classes.Crossbow()       
+                            dmg_mod, hit_chance, rel_time = classes.Crossbow()       
                      
                      break
                      

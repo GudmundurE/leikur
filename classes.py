@@ -42,7 +42,7 @@ def Crossbow():
 
     dmg_mod = 250
     hit_chance = 90
-    'rel_time = True'
+    rel_time = True
     return dmg_mod, hit_chance, rel_time
 
 def Firestaff():
