@@ -5,6 +5,8 @@ import nav
 print("Welcome")
 wants_to_play = input("Press 1 to start playing!: ")
 
+
+
 while True:
        if wants_to_play == "1":
               print("Let's play!")
@@ -54,7 +56,9 @@ while True:
 
 
 print("You start with ", hp, " hp, ", dmg, "dmg and ", luck, "luck", hit_chance, dmg_mod)
-left_or_right = input("First choice... Left or Right (Left = 1 / Right = 2)?")
+
+
+
 while left_or_right != "1" or "2":
               if left_or_right == "1":
                      print()
