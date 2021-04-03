@@ -3,11 +3,14 @@ import classes
 import mobs
 import nav
 import directions
+import weapons
 
 kort = nav.nav()
 
 x_pos = random.randint(4,8)
 y_pos = random.randint(4,8)
+
+player_xp = 0
 
 print("Welcome")
 wants_to_play = input("Press 1 to start playing!: ")
@@ -20,34 +23,34 @@ while True:
               class_chosen = input("Chose your class: Warrior/1, Ranger/2, Mage/3: ")
               
               if class_chosen == "1":
-                     hp, dmg, luck = classes.Warrior()
+                     player_hp, player_dmg, player_luck = classes.Warrior()
 
                      weapon_chosen = input("Choose your weapon: Axe/1, Sword/2: ")
                      if weapon_chosen == "1":
-                            dmg_mod, hit_chance = classes.Axe()
+                            dmg_mod, hit_chance = weapons.Axe()
                      elif weapon_chosen == "2":
-                            dmg_mod, hit_chance = classes.Sword()
+                            dmg_mod, hit_chance = weapons.Sword()
                      break
               
               elif class_chosen == "2":
-                     hp, dmg, luck = classes.Ranger()
+                     player_hp, player_dmg, player_luck = classes.Ranger()
 
                      weapon_chosen = input("Choose your weapon: Bow/1, Crossbow/2: ")
                      if weapon_chosen == "1":
-                            dmg_mod, hit_chance, rel_time = classes.Bow()
+                            dmg_mod, hit_chance, rel_time = weapons.Bow()
                      elif weapon_chosen == "2":
-                            dmg_mod, hit_chance, rel_time = classes.Crossbow()       
+                            dmg_mod, hit_chance, rel_time = weapons.Crossbow()       
                      
                      break
                      
               elif class_chosen == "3":
-                     hp, dmg, luck = classes.Mage()
+                     player_hp, player_dmg, player_luck = classes.Mage()
 
                      weapon_chosen = input("Choose your weapon: Firestaff/1, Frostaff/2: ")
                      if weapon_chosen == "1":
-                            dmg_mod, hit_chance = classes.Firestaff()
+                            dmg_mod, hit_chance = weapons.Firestaff()
                      elif weapon_chosen == "2":
-                            dmg_mod, hit_chance = classes.Froststaff()
+                            dmg_mod, hit_chance = weapons.Froststaff()
 
                      break
               else:
@@ -60,7 +63,7 @@ while True:
 
 
 
-print("You start with", hp, "hp,", dmg, "dmg and", luck, "luck", hit_chance, dmg_mod)
+print("You start with", player_hp, "hp,", player_dmg, "dmg and", player_luck, "luck", hit_chance, dmg_mod)
 
 
 
@@ -73,4 +76,14 @@ while True:
                      break
        
        x_pos,y_pos = directions.direct(N,W,E,S,x_pos,y_pos)
+
+       mob = mobs.generate_mob(player_luck,player_xp)
+
+       print("You are faced with",mob[0])
+
+       #FIGHT MEKANIKS HERE
+
+       print("You killed it you gain",mob[3],"xp")
+
+       player_xp += int(mob[3])
        
