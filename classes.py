@@ -36,7 +36,8 @@ def Bow():
 
     dmg_mod = 130
     hit_chance = 70
-    return dmg_mod, hit_chance
+    rel_time = True
+    return dmg_mod, hit_chance, rel_time
 
 def Crossbow():
 

@@ -1,15 +1,16 @@
+import random
 import classes
 import mobs
 import nav
 import directions
 
-print("Welcome")
-wants_to_play = input("Press 1 to start playing!: ")
-
 kort = nav.nav()
 
-x_pos = 8
-y_pos = 8
+x_pos = random.randint(4,8)
+y_pos = random.randint(4,8)
+
+print("Welcome")
+wants_to_play = input("Press 1 to start playing!: ")
 
 while True:
        if wants_to_play == "1":
@@ -59,7 +60,7 @@ while True:
 
 
 
-print("You start with ", hp, " hp, ", dmg, "dmg and ", luck, "luck", hit_chance, dmg_mod)
+print("You start with", hp, "hp,", dmg, "dmg and", luck, "luck", hit_chance, dmg_mod)
 
 
 
@@ -71,14 +72,4 @@ while True:
                      break
        
        x_pos,y_pos = directions.direct(N,W,E,S,x_pos,y_pos)
-
-
-
-while left_or_right != "1" or "2":
-              if left_or_right == "1":
-                     print()
-              elif left_or_right =="2":
-                     print()
-              else:
-                     print("Choose 1 or")
        
