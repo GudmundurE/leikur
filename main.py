@@ -69,6 +69,7 @@ while True:
               if row[0] == x_pos and row[1] == y_pos:
                      N,W,E,S = int(row[2]),int(row[3]),int(row[4]),int(row[5])
                      biome = row[6]
+                     print ("You have entered", biome) 
                      break
        
        x_pos,y_pos = directions.direct(N,W,E,S,x_pos,y_pos)
