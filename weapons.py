@@ -1,20 +1,20 @@
 def Axe():
 
     dmg_mod = 150
-    hit_chance = 60
+    hit_chance = 15
     return dmg_mod, hit_chance
 
 def Sword():
 
     dmg_mod = 110
-    hit_chance = 90
+    hit_chance = 10
     return dmg_mod, hit_chance
 
 def Bow():
 
     dmg_mod = 130
     hit_chance = 70
-    rel_time = True
+    rel_time = False
     return dmg_mod, hit_chance, rel_time
 
 def Crossbow():
