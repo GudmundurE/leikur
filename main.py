@@ -83,7 +83,7 @@ while True:
 
        #FIGHT MEKANIKS HERE
 
-       print("You killed it you gain",mob[3],"xp")
+       print("You killed it! you gain",mob[3],"xp")
 
        player_xp += int(mob[3])
        
