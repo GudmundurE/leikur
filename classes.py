@@ -18,3 +18,6 @@ def Mage():
     dmg = 30
     luck = 4
     return hp, dmg, luck
+
+def lvl_up():
+    pass

@@ -48,21 +48,27 @@ def direct(N,W,E,S,x_pos,y_pos):
 
         if direction == "N" and N == 1:
             y_pos += 1
+            return x_pos,y_pos
         elif direction == "W" and W == 1:
             x_pos -= 1
+            return x_pos,y_pos
         elif direction == "E" and E == 1:
             x_pos += 1
+            return x_pos,y_pos
         elif direction == "S" and S == 1:
             y_pos -= 1
+            return x_pos,y_pos
         elif direction == "n" and N == 1:
             y_pos += 1
+            return x_pos,y_pos
         elif direction == "w" and W == 1:
             x_pos -= 1
+            return x_pos,y_pos
         elif direction == "e" and E == 1:
             x_pos += 1
+            return x_pos,y_pos
         elif direction == "s" and S == 1:
             y_pos -= 1
+            return x_pos,y_pos
         else:
             print("Invalid input!...")
-        
-        return x_pos,y_pos

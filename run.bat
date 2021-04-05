@@ -1,0 +1,1 @@
+"C:\Users\gummi\AppData\Local\Programs\Python\Python37-32\python.exe" "C:\Users\gummi\Desktop\HR\Leikur\leikur\main.py"
