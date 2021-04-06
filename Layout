@@ -17,11 +17,11 @@ Tónlist?
         öxi meira dmg minni chance 
         sverð minna dmg meiri chance
     Ranger
-        bogi - meh
-        lásabogi  BIIIG dmg, fær bara að gera 2ðu hverju roundi
+        bogi - minni líkur meira dmg
+        lásabogi Meiri líkur minna dmg
     Mage
-        Eldstafur meira á suma minna á suma
-        Froststafur sama^^
+        Eldstafur meira dmg
+        Froststafur skipp á törn
 2.Hlutir sem geta skeð:
     Mobs
         lvl 1
@@ -32,8 +32,6 @@ Tónlist?
         lvl 2
             Troll
             Bear
-            Gorilla Warrior
-            Treeman
             
 
     Stöff sem skeður á hverju biomi
@@ -41,7 +39,7 @@ Tónlist?
             Crossing
             Troll under bridge - Hægt að borga til að komast yfir annars slást við 
             Trader - selur bjór sem gefur hp
-            Zombie(mob)
+            Zombie(mob) lvl 2
             Skeleton(mob) lvl 1 
             Troll(mob) lvl 3
             River imp(mob) lvl 1
@@ -51,18 +49,22 @@ Tónlist?
             Lava monster(mob)
             Lava blob(mob) lvl 1
             Zombie(mob) lvl 2
-            Skeleton(mob) lvl 1    
+            Skeleton(mob) lvl 2   
             
         Forrest
             Trader - selur bjór sem gefur hp
             Rooter(mob) lvl 3
             Rootling(mob) lvl 1
             Zombie(mob) lvl 2
-            Skeleton(mob) lvl 1
-            
+            Skeleton(mob) lvl 2
+        
+        Meadow
+            Ekki fokking neitt
+
         Field
             Happy farmer - gefur bjór sem gefur hp
-            Angry farmer(mob) lvl 1
+            scarecrow(mob) lvl 4
+            Angry farmer(mob) lvl 3
             Guard dog(mob) lvl 2
             pig(mob) lvl 1
         cave
@@ -84,7 +86,11 @@ Tónlist?
             dmg upp
             dmg niður
         
-
+lvl 1 = 0 - 100
+lvl 2 = 100 - 200
+lvl 3 = 200 - 300
+lvl 4 = 300 - 400
+lvl 5 = 400 - 500
 
 light = (random(dmg * ))
 normal = random(dmg * dmgmod til (dmg * dmgod)* luck) 50%

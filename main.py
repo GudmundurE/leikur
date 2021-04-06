@@ -100,4 +100,4 @@ while True:
        fight_chance = random.randint(1,100)
 
        if fight_chance < 70:
-              player_xp, player_hp = fight.fight_mob(player_luck,player_xp,player_dmg,player_hp,hit_chance,player_class)
+              player_xp, player_hp = fight.fight_mob(player_luck,player_xp,player_dmg,player_hp,hit_chance,player_class, biome)

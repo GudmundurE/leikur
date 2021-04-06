@@ -3,14 +3,14 @@ import random
 import sys
 from os import system
 
-def fight_mob(player_luck,player_xp,player_dmg,player_hp,hit_chance,player_class):
+def fight_mob(player_luck,player_xp,player_dmg,player_hp,hit_chance,player_class,biome):
     
     cls = lambda: system('cls')
     cls()
 
     
 
-    mob = mobs.generate_mob(player_luck,player_xp)
+    mob = mobs.generate_mob(player_luck,player_xp, biome)
 
     mob_health = int(mob[1])
     mob_dmg = int(mob[2])
@@ -73,6 +73,7 @@ def fight_mob(player_luck,player_xp,player_dmg,player_hp,hit_chance,player_class
             print("You can use:")
             print("1. Ranged Attack")
             print("2. Backstab")
+            print("3. Stab")
             attack_type = input("Select your attack... ")
             cls()
 
@@ -94,6 +95,18 @@ def fight_mob(player_luck,player_xp,player_dmg,player_hp,hit_chance,player_class
                     print("HIT!")
                     damage = float(damage) * 3
                     damage = int(round(damage))
+                    mob_health -= damage
+                    print("You did", damage, "damage!")
+                    if mob_health > 0:
+                        print("They have", mob_health,"hp left!")
+                    else:
+                        pass
+                else:
+                    print("You missed!!")
+            elif attack_type == "3":
+                if chance >= 5:
+                    print("HIT!")
+                    damage = 15
                     mob_health -= damage
                     print("You did", damage, "damage!")
                     if mob_health > 0:
