@@ -1,14 +1,11 @@
 def Axe():
 
-    dmg_mod = 150
-    hit_chance = 15
     dmg_mod = 1.5
     hit_chance = -15
     return dmg_mod, hit_chance
 
 def Sword():
 
-    dmg_mod = 110
     dmg_mod = 1
     hit_chance = 0 
     return dmg_mod, hit_chance

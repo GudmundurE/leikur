@@ -38,7 +38,7 @@ def nav():
             if y == 15:
                 N = 0
             
-            biomes = ["a Forest", "Lava fields", "a Meadow", "a Cave", "River lands"]
+            biomes = ["a Forest", "Lava fields", "a Field", "a Cave", "River lands"]
 
             biome = biomes[random.randint(0,len(biomes)-1)]
 
