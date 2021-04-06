@@ -110,6 +110,47 @@ def fight_mob(player_luck,player_xp,player_dmg,player_hp,hit_chance,player_class
             print("2. Normal Spell")
             print("3. Heavy Spell")
             attack_type = input("Select your attack... ")
+            cls()
+
+            damage = random.randint(player_dmg,(player_dmg*player_luck))
+
+            if attack_type == "1":
+                if chance >= 33:
+                    print("HIT!")
+                    damage = float(damage) * 0.67
+                    damage = int(round(damage))
+                    mob_health -= damage
+                    print("You did", damage, "damage!")
+                    if mob_health > 0:
+                        print("They have", mob_health,"hp left!")
+                    else:
+                        pass
+                else:
+                    print("You missed!!")
+            elif attack_type == "2":
+                if chance >= 50:
+                    print("HIT!")
+                    mob_health -= damage
+                    print("You did", damage, "damage!")
+                    if mob_health > 0:
+                        print("They have", mob_health,"hp left!")
+                    else:
+                        pass
+                else:
+                    print("You missed!!")
+            elif attack_type == "3":
+                if chance >= 66:
+                    print("HIT!")
+                    damage = float(damage) * 1.33
+                    damage = int(round(damage))
+                    mob_health -= damage
+                    print("You did", damage, "damage!")
+                    if mob_health > 0:
+                        print("They have", mob_health,"hp left!")
+                    else:
+                        pass
+                else:
+                    print("You missed!!")
 
         mob_hit = random.randint(1,100)
 
