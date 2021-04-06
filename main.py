@@ -5,9 +5,12 @@ import nav
 import directions
 import weapons
 import fight
+from playsound import playsound
 from os import system
 
 cls = lambda: system('cls')
+
+playsound('Tonlist_Leikur_1.mp3', False)
 
 kort = nav.nav()
 

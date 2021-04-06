@@ -36,6 +36,7 @@ def pig():
 
     return [name,hp,dmg,xp]
 
+
 def cave_troll():
 
     name = "a cave troll"
@@ -100,7 +101,7 @@ def boss():
     return [name,hp,dmg,xp]
 
 def generate_mob(player_luck, player_xp):
-        #LAGA REIKNING, REIKNINGUR VERA MJÖG LÉLEGUR
+
         if player_xp < 100:
             chance = ((10+(random.uniform(13,18)*float(player_luck)))-float(player_xp))
 
