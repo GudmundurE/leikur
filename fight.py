@@ -16,11 +16,10 @@ def fight_mob(player_luck,player_xp,player_dmg,player_hp,hit_chance,player_class
     mob_dmg = int(mob[2])
     mob_xp = int(mob[3])
 
-    print("You are faced with",mob[0])
+    print("You are faced with",mob[0], "it has, ", mob_health," hp")
     
     while mob_health > 0:
         chance = random.randint(1,100)
-
         chance += hit_chance
         if player_class == "Warrior":
             print("You can use:")
@@ -91,9 +90,9 @@ def fight_mob(player_luck,player_xp,player_dmg,player_hp,hit_chance,player_class
                 else:
                     print("You missed!!")
             elif attack_type == "2":
-                if chance >= 80:
+                if chance >= 75:
                     print("HIT!")
-                    damage = float(damage) * 2
+                    damage = float(damage) * 3
                     damage = int(round(damage))
                     mob_health -= damage
                     print("You did", damage, "damage!")
@@ -105,8 +104,6 @@ def fight_mob(player_luck,player_xp,player_dmg,player_hp,hit_chance,player_class
                     print("You missed!!")
 
             
-
-        
         elif player_class == "Mage":
             print("You can use:")
             print("1. Light Spell")

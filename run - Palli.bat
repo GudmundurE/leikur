@@ -1,0 +1,1 @@
+"C:\Users\palla\AppData\Local\Programs\Python\Python38-32\python.exe" "C:\Users\palla\OneDrive\Documents\Forrit\Leikur\leikur\main.py"

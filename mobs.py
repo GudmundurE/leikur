@@ -12,8 +12,8 @@ def skeleton():
 def zombie():
 
     name = "a zombie"
-    hp = 130
-    dmg = 7
+    hp = 120
+    dmg = 4
     xp = 14
 
     return [name,hp,dmg,xp]
@@ -35,12 +35,12 @@ def pig():
     xp = 3
 
     return [name,hp,dmg,xp]
-'''
+
 def cave_troll():
 
     name = "a cave troll"
     hp = 300
-    dmg 12
+    dmg = 12
     xp = 100    
 
     return [name,hp,dmg,xp]
@@ -57,7 +57,6 @@ def tree_man():
 def lava_monster():
 
     name = "a lava monster"
-    
     hp = 200
     dmg = 15
     xp = 100
@@ -90,7 +89,7 @@ def goblin_mage():
     xp = 12
 
     return [name,hp,dmg,xp]
-'''
+
 def boss():
 
     name = "the BOSS"
