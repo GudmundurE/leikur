@@ -94,6 +94,8 @@ while True:
        
        x_pos,y_pos = directions.direct(N,W,E,S,x_pos,y_pos)
        
+       event_chance = random.randint(1,100)
+
 
        fight_chance = random.randint(1,100)
 
